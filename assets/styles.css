@@ -177,3 +177,16 @@ textarea{min-height:140px;resize:vertical}
 .nav{height:88px}.logo{height:68px}.menu{top:88px}
 @media(max-width:860px){.menu{top:88px}}
 @media(max-width:620px){.logo{height:52px}.nav{height:76px}}
+
+/* Dropdown + FAQ */
+.has-sub{position:relative}
+.sub{list-style:none;margin:0;padding:8px;position:absolute;left:0;top:100%;min-width:250px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-lg);display:none;z-index:60}
+.has-sub:hover>.sub,.has-sub:focus-within>.sub{display:block}
+.sub a{padding:9px 12px;font-weight:600;font-size:.9rem;box-shadow:none!important;border-radius:8px}
+@media(max-width:860px){.sub{position:static;display:block;box-shadow:none;border:0;padding:0 0 0 14px;min-width:0}}
+.faq{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;padding:0 22px}
+.faq summary{cursor:pointer;font-weight:700;padding:18px 0;color:var(--navy);list-style:none;position:relative;padding-right:30px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:14px;font-size:1.5rem;color:var(--teal)}
+.faq[open] summary::after{content:"–"}
+.faq p{color:var(--muted);padding-bottom:18px;margin:0}
