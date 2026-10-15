@@ -13,6 +13,8 @@ var els=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(el){io.observe(el);});}
 else{els.forEach(function(el){el.classList.add('in');});}
 var f=document.getElementById('enquiry');
+var q=new URLSearchParams(location.search).get('service');var mp={ocean:'Ocean Freight Forwarding',agency:'Ship Agency Services',husbandry:'Husbandry Services',integrated:'Integrated Logistics'};
+if(f&&q&&mp[q]){f.elements.service.value=mp[q];}
 if(f){f.addEventListener('submit',function(e){e.preventDefault();
 if(f.website&&f.website.value)return;
 var g=function(n){return f.elements[n].value.trim();};
