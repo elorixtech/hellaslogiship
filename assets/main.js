@@ -23,5 +23,6 @@ if(f){f.addEventListener('submit',function(e){e.preventDefault();
 if(f.website&&f.website.value)return;
 var g=function(n){return f.elements[n].value.trim();};
 var body='Name: '+g('name')+'\nCompany: '+g('company')+'\nEmail: '+g('email')+'\nPhone: '+g('phone')+'\nInterested in: '+g('service')+'\n\n'+g('message');
+var st=document.getElementById('form-status');if(st){st.textContent='Thank you. Your email app should now open with your enquiry ready to send. If nothing opens, please email hellas.logiship@gmail.com directly.';st.classList.add('show');}
 window.location.href='mailto:hellas.logiship@gmail.com?subject='+encodeURIComponent('Website enquiry: '+g('service')+' - '+g('name'))+'&body='+encodeURIComponent(body);});}
 })();
