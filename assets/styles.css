@@ -234,3 +234,26 @@ textarea{min-height:140px;resize:vertical}
   .menu .mega-item{padding:10px}
   .mega-item small{display:none}
 }
+
+/* Photography */
+.hero-photo{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.35);aspect-ratio:3/2;background:var(--navy-2)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(2,36,92,.85);backdrop-filter:blur(6px);color:#fff;border-radius:14px;padding:12px 18px;display:flex;flex-direction:column;font-size:.85rem;border-left:4px solid var(--gold)}
+.hero-photo figcaption b{font-family:var(--serif);font-size:1.1rem}
+.hero-photo figcaption span{color:#cfe0ef}
+.photo-card{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);min-height:440px;display:flex;align-items:flex-end;background:var(--navy-2)}
+.photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-card figcaption{position:relative;color:#fff;padding:40px 32px 32px;background:linear-gradient(to top,rgba(2,36,92,.96),rgba(2,36,92,.6) 65%,transparent);width:100%}
+.photo-card h3{color:#fff;font-size:1.6rem}
+.photo-card p{color:#dbe8f5;margin:0 0 6px}
+.photo-band{margin:0;position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.photo-band img{width:100%;height:clamp(220px,32vw,400px);object-fit:cover;display:block}
+.photo-band figcaption{position:absolute;left:0;bottom:0;padding:18px 26px;background:linear-gradient(90deg,rgba(2,36,92,.9),transparent);color:#fff;font-family:var(--serif);font-style:italic;font-size:1.3rem;width:60%}
+.photo-inline{margin:0}
+.photo-inline img{width:100%;border-radius:16px;margin-top:26px;box-shadow:var(--shadow);aspect-ratio:16/10;object-fit:cover;display:block}
+.img-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.3s}
+.img-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.img-card img{width:100%;height:260px;object-fit:cover;display:block}
+.img-card .body{padding:28px 30px 32px}
+.img-card p{color:var(--muted)}
+@media(max-width:960px){.hero-photo{order:-1;max-width:520px;margin:auto}}
